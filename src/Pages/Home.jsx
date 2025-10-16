@@ -1,9 +1,17 @@
 import React from 'react';
+import Banner from '../components/Banner';
+import Intro from '../components/Banner';
+import HomeContent from '../components/HomeContent';
+import FindMe from '../components/findMe';
+import Subscribe from '../components/Subscribe';
 
 const Home = () => {
     return (
         <div>
-            <h1>Home page</h1>
+            <Banner/>
+            <HomeContent/>
+            <Subscribe/>
+            <FindMe/>
         </div>
     );
 };

@@ -9,7 +9,7 @@ import About from "../Pages/About";
         Component: Root,
         children: [
             {
-                path:'/home',
+                index:true,
                 Component:Home
             },
             {

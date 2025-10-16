@@ -1,2 +1,35 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @plugin "daisyui";
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.text-custom{
+    color: #12F7D6;
+}
+.bg-custom-primary{
+ background-color: #282F37;
+}
+.bg-custom-sec{
+ background-color: #12F7D6;
+}
+
+.drop-down-li{
+    background-color: rgb(255, 255, 253);
+    padding: 8px 16px;
+    color: #282F37;
+    font-size: 16px;
+
+}
+.drop-down-li:hover{
+    cursor: pointer;
+    background-color: #282F37;
+    padding: 10px 16px;
+    color: #12F7D6;
+    transition: 0.5s;
+
+}
