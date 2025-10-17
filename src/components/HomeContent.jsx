@@ -33,7 +33,7 @@ const HomeContent = () => {
           </p>
           <ul className="mt-4 space-y-2 text-gray-400">
             <li>
-              <span className="font-bold text-[#12F7D6]">SSC - 2021:</span> Syedkathi Union Secondary School, Banaripara, Barishal
+              <span onClick='education/ssc' className="font-bold text-[#12F7D6]">SSC - 2021:</span> Syedkathi Union Secondary School, Banaripara, Barishal
             </li>
             <li>
               <span className="font-bold text-[#12F7D6]">HSC - 2023:</span> Govt. B.M. College, Barishal

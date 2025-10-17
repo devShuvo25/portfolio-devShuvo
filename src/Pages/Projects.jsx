@@ -1,15 +1,37 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-// import academic1 from "../assets/academic1.jpg";
-// import academic2 from "../assets/academic2.jpg";
+import academic1 from "../assets/pixel.jpeg";
+import academic2 from "../assets/color-wheel.jpeg";
+import academic3 from "../assets/bggg.png";
+import academic4 from "../assets/white.jpeg";
+import academic5 from "../assets/line new.jpg";
+import academic6 from "../assets/poster.jpg";
 
 // Sample data, replace with your projects
 const developmentProjects = [
   {
-    title: "Portfolio Website",
+    title: "Pulse App Store",
+    description: "Responsive portfolio built with React, Tailwind, and Framer Motion.",
+    github: "https://pulse-app-store.netlify.app/",
+    live: "https://pulse-app-store.netlify.app/",
+  },
+  {
+    title: "Ticket Bridge",
     description: "Responsive portfolio built with React, Tailwind, and Framer Motion.",
     github: "https://github.com/yourusername/portfolio",
-    live: "https://yourportfolio.com",
+    live: "https://tickets-bridge-by-devshuvo.netlify.app/",
+  },
+  {
+    title: "Payoo App",
+    description: "Full-stack MERN app with authentication and task management features.",
+    github: "https://github.com/devShuvo25/payoo-app",
+    live: "https://devshuvo25.github.io/payoo-app/",
+  },
+  {
+    title: "English Janaala",
+    description: "Full-stack MERN app with authentication and task management features.",
+    github: "https://github.com/devShuvo25/english-janala",
+    live: "https://devshuvo25.github.io/english-janala/",
   },
   {
     title: "Task Manager App",
@@ -21,15 +43,35 @@ const developmentProjects = [
 
 const academicProjects = [
   {
-    title: "Urban Planning Case Study",
-    description: "Sustainable urban development strategies for Barishal city.",
-    image: '',
+    title: "Portfolio",
+    description: "Overall Projects-all in one.",
+    image: academic3
   },
   {
-    title: "Smart City Analysis",
-    description: "Analyzed city traffic and infrastructure using GIS and AutoCAD.",
-    image: '',
+    title: "Pixelation",
+    description: "Portrait self pixelation for URP 1152 lab.",
+    image: academic1
   },
+  {
+    title: "Color Wheel",
+    description: "Understanding the colot concept",
+    image:academic2
+  },
+  {
+    title: "2D Composition",
+    description: "Understanding 2D Model",
+    image:academic4
+  },
+  {
+    title: " Composition Line",
+    description: "Understanding Line Composition of nature",
+    image:academic5
+  },
+  {
+    title: " Poster Design",
+    description: "Understanding Line Composition of nature",
+    image:academic6
+  }
 ];
 
 export default function ProjectsShowcase() {

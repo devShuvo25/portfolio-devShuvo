@@ -79,7 +79,8 @@ const NavBar = () => {
 
           {/* Download CV (always right) */}
           <a
-            href="/DevShuvo_CV.pdf"
+            href="https://drive.google.com/file/d/1gNUexHw9eR_fBh0K437HS5T8MgguX0yp/view?usp=drive_link"
+            target="_blank"
             className="px-5 py-2 bg-custom-sec text-white rounded-lg hover:bg-[#0ebea6] transition-colors duration-200"
           >
             Download CV
