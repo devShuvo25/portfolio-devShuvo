@@ -1,105 +1,126 @@
 import React from "react";
-import Card from "./Card";
+import { motion } from "framer-motion";
 import {
-  FaCode,
   FaBookReader,
   FaRegLightbulb,
   FaLaptopCode,
   FaTools,
 } from "react-icons/fa";
-import ProjectLogo from "../assets/carrer-removebg-preview.png";
+import { MdReviews } from "react-icons/md";
+
 import myImage1 from "../assets/myImage2.jpg";
 import myImage2 from "../assets/myImage1.jpg";
-import { motion } from "framer-motion";
-import { Link } from "react-router";
-import { MdReviews } from "react-icons/md";
+
 const HomeContent = () => {
   return (
-    <div className="w-full flex justify-between p-10 ">
-        <motion.div className="w-[45%] flex flex-col gap-10 justify-between"
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}>
-      <div className="flex flex-col gap-5 px-5">
-        
-        <div className="border-b-[1px] pb-5">
-                    <h1 className="text-2xl flex items-center gap-2 border-l-[2px] border-[#12F7D6] ps-4 py-3"><FaBookReader
-        /> <span className="text-[#12F7D6]">Education</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam voluptate animi labore beatae dolore possimus ab ea nemo doloribus.</p>
-        <ol className="px-10 mt-3">
-            <Link className="text-xl font-bold text-[#12F7D6]">SSC - 2021,</Link>
-            <p>Syedkathi Union Secondary Scholl,</p>
-            <p>Banaripara,Barishal</p>
-        </ol>
-        <ol className="ps-10 mt-3">
-            <Link className="text-xl font-bold text-[#12F7D6]">HSC - 2023,</Link>
-            <p>Govt. B.M. College,</p>
-            <p>Barishal</p>
-        </ol>
-        <ol className="ps-10 mt-3">
-            <Link className="text-xl font-bold text-[#12F7D6]">BURP</Link>
-            <p>Khulna University of Engineering and Technology-[KUET]</p>
-            <p>Khulna,Bangladesh</p>
-        </ol>
-        </div>
-    <div className="flex flex-col gap-5 justify-between border-b-[1px] pb-5">
-        <h1 className="text-2xl flex items-center gap-2 border-l-[2px] border-[#12F7D6] ps-4 py-3"><FaRegLightbulb/>
-         <span className="text-[#12F7D6]">Skills</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam voluptate animi labore beatae dolore possimus ab ea nemo doloribus.</p>
-        <ol className="ps-10">
-            <h1 className="text-xl font-bold text-[#12F7D6]">Programming</h1>
-            <li>MERN Stack Apps And Web Developent</li>
-        </ol>
-      </div>
-    <div className="flex flex-col gap-5 justify-between">
-        <h1 className="text-2xl flex items-center gap-2 border-l-[2px] border-[#12F7D6] ps-4 py-3"><FaRegLightbulb/>
-         <span className="text-[#12F7D6]">Projects</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione numquam voluptate animi labore beatae dolore possimus ab ea nemo doloribus.</p>
-        <ol className="ps-10 space-y-1">
-            
-            <li >
-                <h1 className="text-xl font-bold text-[#12F7D6]">Academimc</h1>
-                <p>MERN Stack Apps And Web Developent</p>
-            </li>
-            <li className="mt-5">
-                <h1 className="text-xl font-bold text-[#12F7D6]">Web Projects</h1>
-                <p>MERN Stack Apps And Web Developent</p>
-            </li>
-
-        </ol>
-      </div>
+    <div className="w-full flex flex-col lg:flex-row gap-10 p-6 lg:p-10">
       
-
-      </div>
-        </motion.div>
-        <motion.div className="w-[60%]  p-10 rounded-2xl"
-        initial={{ x: 200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1 }}>
-      <div>
-        <div className="relative w-full h-[400px] rounded-2xl text-center">
-          <img className="h-[350px] z-10 border-[1px] rounded-2xl absolute right-30 top-50" src={myImage2} alt="" />
-          <img className="h-[350px] border-[1px] rounded-2xl absolute top-7 left-20 " src={myImage1} alt="" />
+      {/* Left Side: Education, Skills, Projects */}
+      <motion.div
+        className="lg:w-1/2 flex flex-col gap-8"
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {/* Education Card */}
+        <div className="bg-[#20252c] border border-[#12F7D6] rounded-xl p-6 shadow-lg hover:shadow-2xl transition">
+          <h2 className="text-2xl font-bold flex items-center gap-2 border-l-4 border-[#12F7D6] pl-4 pb-2 text-[#12F7D6]">
+            <FaBookReader /> Education
+          </h2>
+          <p className="mt-2 text-gray-300">
+            I have pursued my education with dedication and a focus on building
+            a strong foundation for my career in software development and urban planning.
+          </p>
+          <ul className="mt-4 space-y-2 text-gray-400">
+            <li>
+              <span className="font-bold text-[#12F7D6]">SSC - 2021:</span> Syedkathi Union Secondary School, Banaripara, Barishal
+            </li>
+            <li>
+              <span className="font-bold text-[#12F7D6]">HSC - 2023:</span> Govt. B.M. College, Barishal
+            </li>
+            <li>
+              <span className="font-bold text-[#12F7D6]">BURP:</span> Khulna University of Engineering and Technology (KUET), Khulna, Bangladesh
+            </li>
+          </ul>
         </div>
-<div className="mt-60 flex justify-between items-center p-10  ">
-        <div className="flex flex-col items-center justify-center gap-2">
-            <FaLaptopCode size={30} />
-        <h1 className="text-5xl font-bold text-[#12F7D6]">50+</h1>
-        <p>Projects</p>
-    </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-            <FaTools size={30} />
-        <h1 className="text-5xl font-bold text-[#12F7D6]">10+</h1>
-        <p>Tools Skills</p>
-    </div>
-        <div className="flex flex-col items-center justify-center gap-2">
-            <MdReviews size={30} />
-        <h1 className="text-5xl font-bold text-[#12F7D6]">500+</h1>
-        <p>Review</p>
-    </div>
-</div>
-      </div>
-        </motion.div>
+
+        {/* Skills Card */}
+        <div className="bg-[#20252c] border border-[#12F7D6] rounded-xl p-6 shadow-lg hover:shadow-2xl transition">
+          <h2 className="text-2xl font-bold flex items-center gap-2 border-l-4 border-[#12F7D6] pl-4 pb-2 text-[#12F7D6]">
+            <FaRegLightbulb /> Skills
+          </h2>
+          <p className="mt-2 text-gray-300">
+            I am proficient in full-stack web development, particularly MERN stack, and continuously improve my skillset to deliver high-quality projects.
+          </p>
+          <ul className="mt-4 space-y-2 text-gray-400">
+            <li>
+              <span className="font-bold text-[#12F7D6]">Programming:</span> MERN Stack Apps & Web Development
+            </li>
+            <li>
+              <span className="font-bold text-[#12F7D6]">Tools:</span> Git, VS Code, Figma, Firebase, Tailwind CSS
+            </li>
+          </ul>
+        </div>
+
+        {/* Projects Card */}
+        <div className="bg-[#20252c] border border-[#12F7D6] rounded-xl p-6 shadow-lg hover:shadow-2xl transition">
+          <h2 className="text-2xl font-bold flex items-center gap-2 border-l-4 border-[#12F7D6] pl-4 pb-2 text-[#12F7D6]">
+            <FaLaptopCode /> Projects
+          </h2>
+          <p className="mt-2 text-gray-300">
+            I have developed a mix of academic and personal projects to sharpen my skills and apply practical solutions.
+          </p>
+          <ul className="mt-4 space-y-2 text-gray-400">
+            <li>
+              <span className="font-bold text-[#12F7D6]">Academic:</span> University assignments, MERN stack mini-projects
+            </li>
+            <li>
+              <span className="font-bold text-[#12F7D6]">Web Projects:</span> Portfolio website, E-commerce apps, Blogging platform
+            </li>
+          </ul>
+        </div>
+      </motion.div>
+
+      {/* Right Side: Image + Stats */}
+      <motion.div
+        className="lg:w-1/2 relative flex flex-col items-center gap-10"
+        initial={{ x: 200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {/* Overlapping Images */}
+        <div className="lg:relative w-full h-[400px] ">
+          <img
+            className="lg:absolute top-0 left-10 w-full md:w-72 h-full lg:h-74 border-[1px] border-[#12F7D6] rounded-2xl shadow-lg object-cover"
+            src={myImage1}
+            alt="Profile 1"
+          />
+          <img
+            className="absolute hidden lg:block border-[1px] -bottom-30 lg:bottom-0 right-0 w-full md:w-72 rounded-2xl shadow-lg object-cover"
+            src={myImage2}
+            alt="Profile 2"
+          />
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-3 gap-4 w-full text-center">
+          <div className="bg-[#20252c] p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
+            <FaLaptopCode size={30} className="mx-auto text-[#12F7D6]" />
+            <h3 className="text-4xl font-bold text-[#12F7D6] mt-2">50+</h3>
+            <p className="text-gray-300 mt-1">Projects</p>
+          </div>
+          <div className="bg-[#20252c] p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
+            <FaTools size={30} className="mx-auto text-[#12F7D6]" />
+            <h3 className="text-4xl font-bold text-[#12F7D6] mt-2">10+</h3>
+            <p className="text-gray-300 mt-1">Tools Skills</p>
+          </div>
+          <div className="bg-[#20252c] p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
+            <MdReviews size={30} className="mx-auto text-[#12F7D6]" />
+            <h3 className="text-4xl font-bold text-[#12F7D6] mt-2">500+</h3>
+            <p className="text-gray-300 mt-1">Review</p>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };
