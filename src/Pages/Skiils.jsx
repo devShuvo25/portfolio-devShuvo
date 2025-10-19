@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaProjectDiagram } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaProjectDiagram, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router";
 
 export default function SkillsCardsSection() {
   const skills = [
@@ -67,6 +68,14 @@ export default function SkillsCardsSection() {
             </motion.div>
           ))}
         </div>
+      </div>
+                  <div className="flex justify-center mt-5">
+        <Link
+          to="/"
+          className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+        >
+          Go Home <FaArrowRight />
+        </Link>
       </div>
     </section>
   );

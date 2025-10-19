@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { FaAward, FaGraduationCap, FaMedal } from "react-icons/fa";
+import { FaArrowRight, FaAward, FaGraduationCap, FaMedal } from "react-icons/fa";
+import { Link } from "react-router";
 
 const achievements = [
   {
@@ -41,7 +42,7 @@ export default function AchievementsSection() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-12"
         >
-          🏆 My Scholarship
+          🏆 My <span className="text-[#12F7D6]">Scholarship</span>
         </motion.h2>
 
         {/* Achievement Cards */}
@@ -68,6 +69,14 @@ export default function AchievementsSection() {
             </motion.div>
           ))}
         </div>
+      </div>
+                  <div className="flex justify-center mt-5">
+        <Link
+          to="/"
+          className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+        >
+          Go Home <FaArrowRight />
+        </Link>
       </div>
     </section>
   );

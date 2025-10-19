@@ -19,7 +19,7 @@ const NavBar = () => {
               <FaBars size={24} />
             </button>
 
-            <Link to="/home" className="flex items-center gap-2 text-xl font-bold uppercase">
+            <Link to="/" className="flex items-center gap-2 text-xl font-bold uppercase">
               <FaCode color="#12F7D6" /> Dev <span className="text-[#12F7D6]">Shuvo</span>
             </Link>
           </div>

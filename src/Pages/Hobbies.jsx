@@ -47,7 +47,7 @@ export default function HobbiesSection() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-10"
         >
-           My Hobbies
+           My <span className="text-[#12F7D6]">Hobbies</span>
         </motion.h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -76,7 +76,7 @@ export default function HobbiesSection() {
             <div className="flex justify-center mt-5">
         <Link
           to="/"
-          className="flex w-30  items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+          className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
         >
           Go Home <FaArrowRight />
         </Link>

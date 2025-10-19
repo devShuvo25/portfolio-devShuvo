@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaArrowRight } from "react-icons/fa";
 import academic1 from "../assets/pixel.jpeg";
 import academic2 from "../assets/color-wheel.jpeg";
 import academic3 from "../assets/bggg.png";
 import academic4 from "../assets/white.jpeg";
 import academic5 from "../assets/line new.jpg";
 import academic6 from "../assets/poster.jpg";
+import { Link } from "react-router";
 
 // Sample data, replace with your projects
 const developmentProjects = [
@@ -173,6 +174,14 @@ export default function ProjectsShowcase() {
         >
           See More Academic Projects
         </a>
+      </div>
+                  <div className="flex justify-center mt-5">
+        <Link
+          to="/"
+          className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+        >
+          Go Home <FaArrowRight />
+        </Link>
       </div>
     </section>
   );

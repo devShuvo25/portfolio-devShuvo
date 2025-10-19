@@ -80,7 +80,7 @@ const About = () => {
                 ["University", "Khulna University of Engineering & Technology (KUET)"],
                 ["Department", "Urban and Regional Planning (URP)"],
                 ["Email", "shuvomallik999@gamil.com"],
-                ["Mobile", "01610801482"],
+                ["Mobile", "+8801610801482"],
                 ["Location", "Khulna, Bangladesh"],
               ].map(([label, value], i) => (
                 <tr
