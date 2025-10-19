@@ -7,15 +7,15 @@ import bm5 from "../assets/kuet11.jpg";
 import bm6 from "../assets/kuet12.jpg";
 import { motion } from "framer-motion";
 const photos = [
-  { src: bm1, caption: "With Cute Mam" },
-  { src: bm2, caption: "With Best Friend in College" },
-  { src: bm3, caption: "Biology Lab" },
-  { src: bm4, caption: "Fresh Time" },
-  { src: bm5, caption: "In Front Campus" },
-  { src: bm6, caption: "Cultural rag Day" },
+  { src: bm1, caption: "Annual Fest FHH" },
+  { src: bm2, caption: "My Birthday Celebration 2024" },
+  { src: bm3, caption: "First Day ,Group Photo" },
+  { src: bm4, caption: "Annual Fest" },
+  { src: bm5, caption: "Saraswati Pujo Day" },
+  { src: bm6, caption: "Central viba 1-1" },
 ];
 
-export default function GalleryDivSSC() {
+export default function GalleryDivKUET() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 lg:px-15 mt-10">
       {photos.map((photo, index) => (

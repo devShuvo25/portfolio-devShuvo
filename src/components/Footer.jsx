@@ -4,10 +4,10 @@ const Footer = () => {
     return (
 <footer className="footer footer-horizontal footer-center bg-[#16191c] text-[rgb(255,255,253)] rounded p-10">
   <nav className="grid grid-flow-col gap-4">
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
-    <a className="link link-hover">Jobs</a>
-    <a className="link link-hover">Press kit</a>
+    <a href='about-me' className="link link-hover">About us</a>
+    <a href='find-me' className="link link-hover">Contact</a>
+    <a href='https://www.facebook.com/shuvo999a' className="link link-hover">Visit FB</a>
+    <a href='https://www.linkedin.com/in/shuvo-mallik-992308301/' className="link link-hover">Visit Linked</a>
   </nav>
   <nav>
     <div className="grid grid-flow-col gap-4">
@@ -47,7 +47,7 @@ const Footer = () => {
     </div>
   </nav>
   <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
+    <p>Copyright © {new Date().getFullYear()} -  All right reserved by -Shuvo Mallik</p>
   </aside>
 </footer>
     );

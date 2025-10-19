@@ -23,7 +23,7 @@ const Subscribe = () => {
               type="email"
               placeholder="mail@site.com"
               required
-              className="w-full px-4 py-3 rounded-l-lg border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:focus:ring-purple-600 transition"
+              className="w-full px-10 py-3 rounded-l-lg border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:focus:ring-purple-600 transition"
             />
             <svg
               className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"
@@ -39,7 +39,7 @@ const Subscribe = () => {
               <path d="M22 7 L13.03 12.7 A1.94 1.94 0 0 1 11 12.7 L2 7"></path>
             </svg>
           </div>
-          <button className="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition">
+          <button className="px-6 py-3 bg-custom-sec text-black rounded-lg shadow-md hover:bg-purple-700 transition">
             Join
           </button>
         </div>

@@ -1,11 +1,10 @@
-
+import { motion } from "framer-motion";
 import bm1 from "../assets/ssc1.jpg";
 import bm2 from "../assets/ssc5.jpg";
 import bm3 from "../assets/ssc6.jpg";
 import bm4 from "../assets/ssc3.jpg";
 import bm5 from "../assets/ssc2.jpg";
 import bm6 from "../assets/c7.jpg";
-import { motion } from "framer-motion";
 const photos = [
   { src: bm1, caption: "With Cute Mam" },
   { src: bm2, caption: "With Best Friend in College" },
@@ -15,7 +14,7 @@ const photos = [
   { src: bm6, caption: "Cultural rag Day" },
 ];
 
-export default function GalleryDivSSC() {
+ function GallerySSc() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-2 lg:px-15 mt-10">
       {photos.map((photo, index) => (
@@ -38,3 +37,5 @@ export default function GalleryDivSSC() {
     </div>
   );
 }
+
+export default GallerySSc;

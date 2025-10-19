@@ -37,7 +37,7 @@ const Banner = () => {
           <div className="text-center flex justify-center lg:justify-normal items-center">
                       <Link
             to="/about-me"
-            className="flex w-30  items-center gap-2 bg-custom-sec px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+            className="flex w-30  text-black items-center gap-2 bg-custom-sec px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
           >
             Explore <FaArrowRight />
           </Link>

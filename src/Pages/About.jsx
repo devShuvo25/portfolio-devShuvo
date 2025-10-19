@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import profile from "../assets/me.jpg";
 import {
@@ -12,8 +12,10 @@ import { VscVscode } from "react-icons/vsc";
 import { CiGlobe } from "react-icons/ci";
 import { GrUserSettings } from "react-icons/gr";
 import { GiInspiration } from "react-icons/gi";
+import FindMeSection from "../components/findMe";
 
 const About = () => {
+  const [isClicked,setIsClicked]= useState(false);
   return (
     <section className="bg-[#1C232B] text-white py-20 px-6 md:px-20">
       {/* Main About Section */}
@@ -77,7 +79,8 @@ const About = () => {
                 ["Full Name", "Shuvo Mallik"],
                 ["University", "Khulna University of Engineering & Technology (KUET)"],
                 ["Department", "Urban and Regional Planning (URP)"],
-                ["Email", "shuvo.mallik@example.com"],
+                ["Email", "shuvomallik999@gamil.com"],
+                ["Mobile", "01610801482"],
                 ["Location", "Khulna, Bangladesh"],
               ].map(([label, value], i) => (
                 <tr
@@ -100,7 +103,7 @@ const About = () => {
         <div className="w-full lg:w-1/2 flex justify-center">
           <iframe
             title="My Location - Khulna, Bangladesh"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.730206540366!2d89.55608381498178!3d22.84564172603632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff9a83330b8fbf%3A0x132db2f1438f6a23!2sKhulna!5e0!3m2!1sen!2sbd!4v1697045858147!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.919835252651!2d89.50206187511991!3d22.899821879257454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff8518d2d29b8b%3A0x1e8b78a07f81d8b!2sKhulna%20University%20of%20Engineering%20%26%20Technology%20(KUET)!5e0!3m2!1sen!2sbd!4v1729260149753!5m2!1sen!2sbd"
             width="100%"
             height="340"
             className="rounded-lg shadow-lg"
@@ -151,12 +154,16 @@ const About = () => {
           View My Work
         </a>
         <a
-          href="#contact"
-          className="px-6 py-3 border border-[#12F7D6] text-[#12F7D6] rounded-full hover:bg-[#12F7D6] hover:text-black transition-all duration-300"
+        
+          onClick={() => setIsClicked(!isClicked)}
+          className="px-6 py-3 border border-[#12F7D6] text-[#12F7D6] hover:cursor-pointer rounded-full hover:bg-[#12F7D6] hover:text-black transition-all duration-300"
         >
-          Contact Me
+          Find Me
         </a>
       </div>
+      {
+        isClicked? <FindMeSection/> : ''
+      }
     </section>
   );
 };

@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaEnvelope, FaLocationDot } from "rea
 export default function FindMeSection() {
   return (
     <section
-      id="findme"
+      id="contact-me"
       className="py-20 "
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -20,7 +20,7 @@ export default function FindMeSection() {
         {/* Social Links */}
         <div className="flex justify-center gap-6 flex-wrap">
           <a
-            href="https://facebook.com/"
+            href="https://www.facebook.com/shuvo999a"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600 shadow-md transition-all duration-300"
@@ -30,7 +30,7 @@ export default function FindMeSection() {
           </a>
 
           <a
-            href="https://github.com/"
+            href="https://github.com/devShuvo25"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-800 text-white hover:bg-gray-900 shadow-md transition-all duration-300"
@@ -40,7 +40,7 @@ export default function FindMeSection() {
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/shuvo-mallik-992308301/"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-700 text-white hover:bg-blue-800 shadow-md transition-all duration-300"
@@ -50,7 +50,9 @@ export default function FindMeSection() {
           </a>
 
           <a
-            href="mailto:shuvo.mallik@example.com"
+            href="mailto:shuvomallik999@gmail.com"
+            target="_blank"
+             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-green-500 text-white hover:bg-green-600 shadow-md transition-all duration-300"
           >
             <FaEnvelope size={20} />

@@ -8,6 +8,12 @@ import UGSection from "../Pages/BURP";
 import SkillsSection from "../Pages/Skiils";
 import ProjectsSection from "../Pages/Projects";
 import Aim from "../Pages/Aim";
+import HobbiesSection from "../Pages/Hobbies";
+import InterestsSection from "../Pages/Intrests";
+import ErrorPage from "../Pages/Eroor";
+import AchievementsSection from "../Pages/Achivments";
+import AwardsSection from "../Pages/Award";
+
 
  const router = createBrowserRouter([
     {
@@ -24,10 +30,6 @@ import Aim from "../Pages/Aim";
             },
             {
                 path:'/about-me',
-                Component:About
-            },
-            {
-                path :'/about-me',
                 Component:About
             },
             {
@@ -54,6 +56,26 @@ import Aim from "../Pages/Aim";
                 path:'aim',
                 Component: Aim
             },
+            {
+                path:'hobbies',
+                Component: HobbiesSection
+            },
+            {
+                path:'intrests',
+                Component: InterestsSection
+            },
+            {
+                path:"*",
+                Component: ErrorPage
+            },
+            {
+                path:"scholarship",
+                Component: AchievementsSection
+            },
+            {
+                path:"award",
+                Component: AwardsSection
+            }
         ]
     }
 ])

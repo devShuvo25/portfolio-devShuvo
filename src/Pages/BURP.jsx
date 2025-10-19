@@ -4,6 +4,9 @@ import kuet2 from "../assets/kuet2.jpg";
 import kuet3 from "../assets/kuet4.jpg";
 import GalleryDiv from "../components/gallery";
 import { motion } from "framer-motion";
+import GalleryDivKUET from "../components/GalleryDiv";
+import { Link } from "react-router";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function UGSection() {
   return (
@@ -14,8 +17,8 @@ export default function UGSection() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 dark:text-white mb-16">
-          🏫 Undergraduate Life —{" "}
-          <span className="text-indigo-600">KUET URP</span>
+           Undergraduate Life 
+          <span className="text-[#12F7D6]"> KUET URP</span>
         </h2>
 
         <div className="flex flex-col md:flex-row items-start gap-12">
@@ -73,11 +76,11 @@ export default function UGSection() {
 
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               I am currently pursuing my undergraduate studies in{" "}
-              <span className="font-semibold text-indigo-600">
+              <span className="font-semibold text-[#12F7D6]">
                 Urban & Regional Planning (URP)
               </span>{" "}
               at{" "}
-              <span className="font-semibold text-blue-600">
+              <span className="font-semibold text-[#12F7D6]">
                 Khulna University of Engineering & Technology (KUET)
               </span>
               . This journey has deepened my interest in designing sustainable
@@ -129,18 +132,26 @@ export default function UGSection() {
             </div>
 
             <a
-              href="https://maps.google.com/?q=KUET"
+              href="https://www.kuet.ac.bd/"
               target="_blank"
               rel="noreferrer"
-              className="inline-block mt-8 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-full transition-all shadow-md"
+              className="inline-block mt-8 px-6 py-3 bg-[#12F7D6] text-black font-medium rounded-sm transition-all shadow-md"
             >
-              View KUET on Map
+              Explore KUET
             </a>
           </motion.div>
         </div>
 
         {/* --- Gallery Section --- */}
-        <GalleryDiv />
+        <GalleryDivKUET />
+      </div>
+                        <div className="flex justify-center mt-8">
+        <Link
+          to="/"
+          className="flex w-30 text-black  items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+        >
+          Go Home <FaArrowRight />
+        </Link>
       </div>
     </section>
   );

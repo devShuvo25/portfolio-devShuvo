@@ -1,13 +1,12 @@
 import React from "react";
 import bm1 from "../assets/bmcampusmain.jpg";
+import bm2 from "../assets/bmcampus2.jpg";
 import bmcampus from "../assets/bmcampus.jpg";
-import bm2 from "../assets/bm2.jpg";
-import bm3 from "../assets/bm3.jpg";
-import bm4 from "../assets/bm4.jpg";
-import bm5 from "../assets/bm5.jpg";
-import bm6 from "../assets/bm6.jpg";
 import GalleryDiv from "../components/gallery";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
+import { FaArrowRight } from "react-icons/fa";
+import GalleryDivHSC from "../components/gallery";
 
 const HSC = () => {
   return (
@@ -138,19 +137,27 @@ const HSC = () => {
             </div>
 
             <a
-              href="https://maps.app.goo.gl/tNQh7eYwRWeV7Fep6"
+              href="https://bmcollege.gov.bd/"
               target="_blank"
               rel="noreferrer"
-              className="inline-block mt-8 px-6 py-3 bg-[#12F7D6] text-white font-medium rounded-full transition-all shadow-md hover:bg-[#0fae9e]"
+              className="inline-block mt-8 px-6 py-3 bg-[#12F7D6] text-black font-medium rounded-sm transition-all shadow-md hover:bg-[#0fae9e]"
             >
-              View BM College on Map
+              Explore
             </a>
           </motion.div>
         </div>
       </div>
 
       {/* Gallery Section */}
-      <GalleryDiv />
+      <GalleryDivHSC />
+                  <div className="flex justify-center mt-8">
+        <Link
+          to="/"
+          className="flex w-30 text-black  items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+        >
+          Go Home <FaArrowRight />
+        </Link>
+      </div>
     </section>
   );
 };

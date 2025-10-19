@@ -15,7 +15,7 @@ const photos = [
   { src: bm6, caption: "Cultural rag Day" },
 ];
 
-export default function GalleryDiv() {
+export default function GalleryDivHSC() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-5 lg:px-15 mt-10">
       {photos.map((photo, index) => (
