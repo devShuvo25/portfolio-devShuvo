@@ -1,18 +1,22 @@
 import { motion } from "framer-motion";
-import schoolImg1 from "../assets/schools campus.jpg"; // replace with real photos
+import schoolImg1 from "../assets/schools campus.jpg";
 import schoolImg2 from "../assets/sscgroup.jpg";
 import schoolImg3 from "../assets/sscgate.jpg";
-import GalleryDivHSC from "../components/gallery";
 import GallerySSc from "../components/GalleryDivSSC";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router";
 
 export default function SscSection() {
   return (
-    <section
-      id="ssc"
-      className="py-24 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
-    >
+    <section id="ssc" className="py-24 bg-[#282F37] text-white">
+<div className="text-center mb-5">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white">
+            School Life
+          </h2>
+                    <h3 className="text-4xl md:text-5xl font-bold text-[#12F7D6]">
+            Syedkathi Union Secondary School
+          </h3>
+</div>
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
         
         {/* Left Image Gallery */}
@@ -23,6 +27,7 @@ export default function SscSection() {
           transition={{ duration: 1 }}
           className="md:w-1/2 grid grid-cols-2 gap-4"
         >
+          
           <img
             src={schoolImg1}
             alt="Syedkathi School 1"
@@ -48,28 +53,27 @@ export default function SscSection() {
           transition={{ duration: 1 }}
           className="md:w-1/2 space-y-8"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">
-              School Life — <span className="text-[#12F7D6]">SSC</span>
-          </h2>
 
-          <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-200">
+          <h3 className="text-2xl font-semibold text-gray-200">
             Syedkathi Union Secondary School
           </h3>
-          <p className="text-gray-500 dark:text-gray-400 italic">
+          <p className="text-gray-400 italic">
             Located in Banaripara, Barishal
           </p>
 
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-            My journey at <strong>Syedkathi Union Secondary School</strong> was where my foundation was built —  
-            the place that shaped my curiosity, discipline, and teamwork.  
-            Surrounded by a friendly environment and inspiring teachers, I developed both academic skills and  
-            a strong sense of purpose.  
+          <p className="text-gray-300 leading-relaxed text-lg">
+            My journey at <strong>Syedkathi Union Secondary School</strong> was
+            where my foundation was built — the place that shaped my curiosity,
+            discipline, and teamwork. Surrounded by a friendly environment and
+            inspiring teachers, I developed both academic skills and a strong
+            sense of purpose.
           </p>
 
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-            During this period, I discovered my love for learning — whether it was science experiments,  
-            cultural activities, or spending time with classmates after school.  
-            These memories remain a vital part of who I am today.
+          <p className="text-gray-300 leading-relaxed text-lg">
+            During this period, I discovered my love for learning — whether it
+            was science experiments, cultural activities, or spending time with
+            classmates after school. These memories remain a vital part of who I
+            am today.
           </p>
 
           <motion.div
@@ -83,13 +87,15 @@ export default function SscSection() {
           </motion.div>
         </motion.div>
       </div>
+
       <div>
-        <GallerySSc/>
+        <GallerySSc />
       </div>
-                        <div className="flex justify-center mt-8">
+
+      <div className="flex justify-center mt-8">
         <Link
           to="/"
-          className="flex w-30 text-black  items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium transition-all duration-300"
+          className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
         >
           Go Home <FaArrowRight />
         </Link>

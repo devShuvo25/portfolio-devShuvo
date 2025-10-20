@@ -2,15 +2,15 @@ import React from "react";
 
 const Subscribe = () => {
   return (
-    <section className="py-16 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-900 dark:to-gray-800">
+    <section className="py-16 bg-[#282F37] text-white">
       <div className="max-w-3xl mx-auto px-6 flex flex-col items-center gap-6 text-center">
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">
+        <h1 className="text-4xl md:text-5xl font-bold text-white">
           Subscribe to Our Newsletter for Design Insights
         </h1>
 
         {/* Subtext */}
-        <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+        <p className="text-sm md:text-base text-gray-300 leading-relaxed">
           Get exclusive updates on projects and design trends. Learn how to
           transform spaces with style and function. Subscribe today and never
           miss an insight.
@@ -23,7 +23,7 @@ const Subscribe = () => {
               type="email"
               placeholder="mail@site.com"
               required
-              className="w-full px-10 py-3 rounded-l-lg border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-400 dark:focus:ring-purple-600 transition"
+              className="w-full px-10 py-3 rounded-l-lg border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#12F7D6] transition"
             />
             <svg
               className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"
@@ -45,7 +45,7 @@ const Subscribe = () => {
         </div>
 
         {/* Note */}
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+        <p className="text-xs text-gray-400 mt-2">
           We respect your privacy. Unsubscribe at any time.
         </p>
       </div>

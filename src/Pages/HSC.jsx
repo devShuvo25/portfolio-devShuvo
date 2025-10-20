@@ -2,27 +2,23 @@ import React from "react";
 import bm1 from "../assets/bmcampusmain.jpg";
 import bm2 from "../assets/bmcampus2.jpg";
 import bmcampus from "../assets/bmcampus.jpg";
-import GalleryDiv from "../components/gallery";
+import GalleryDivHSC from "../components/gallery";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
-import GalleryDivHSC from "../components/gallery";
 
 const HSC = () => {
   return (
-    <section
-      id="hsc"
-      className="py-24 bg-gradient-to-tr from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800"
-    >
+    <section id="hsc" className="py-24" style={{ backgroundColor: '#282F37', color: 'white' }}>
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-800 dark:text-white mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           My College Life —{" "}
           <span className="text-[#12F7D6]">Govt. BM College, Barishal</span>
         </h2>
 
         <div className="flex flex-col md:flex-row items-start gap-12">
-          {/* --- Photos Section --- */}
+          {/* Photos Section */}
           <motion.div
             className="w-full md:w-1/2 grid grid-cols-2 gap-4"
             initial={{ x: -50, opacity: 0 }}
@@ -50,18 +46,14 @@ const HSC = () => {
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex justify-center items-center">
                   <p className="text-white text-sm font-medium">
-                    {index === 0
-                      ? "Academic Building"
-                      : index === 1
-                      ? "Campus Ground"
-                      : `Campus Photo ${index + 1}`}
+                    {index === 0 ? "Academic Building" : "Campus Ground"}
                   </p>
                 </div>
               </div>
             ))}
           </motion.div>
 
-          {/* --- Text + Identity Section --- */}
+          {/* Text + Identity Section */}
           <motion.div
             className="w-full md:w-1/2 space-y-6 text-center md:text-left"
             initial={{ x: 50, opacity: 0 }}
@@ -69,11 +61,11 @@ const HSC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-3xl font-semibold text-gray-800 dark:text-white">
+            <h3 className="text-3xl font-semibold text-gray-200">
               Higher Secondary Certificate (HSC)
             </h3>
 
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               My time at{" "}
               <span className="font-semibold text-[#12F7D6]">
                 Govt. Brojomohun College, Barishal
@@ -84,7 +76,7 @@ const HSC = () => {
               for learning.
             </p>
 
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-300 leading-relaxed">
               Surrounded by motivated students and inspiring teachers, I
               discovered the importance of consistency and self-growth. These
               years gave me a stronger identity — as{" "}
@@ -93,46 +85,28 @@ const HSC = () => {
               passion and dedication.
             </p>
 
-            {/* --- Identity Card --- */}
-            <div className="mt-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-3xl shadow-md hover:shadow-lg transition-shadow p-6 text-left space-y-2">
-              <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+            {/* Identity Card */}
+            <div className="mt-6 bg-[#1F262E] border border-gray-700 rounded-3xl shadow-md hover:shadow-lg transition-shadow p-6 text-left space-y-2">
+              <h4 className="text-xl font-semibold text-gray-200 mb-2">
                 🎓 My Academic Identity
               </h4>
               <p>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">
-                  Name:
-                </span>{" "}
-                Shuvo Mallik
+                <span className="font-semibold text-gray-200">Name:</span> Shuvo Mallik
               </p>
               <p>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">
-                  College:
-                </span>{" "}
-                Govt. Brojomohun College, Barishal
+                <span className="font-semibold text-gray-200">College:</span> Govt. Brojomohun College, Barishal
               </p>
               <p>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">
-                  Board:
-                </span>{" "}
-                Barishal Education Board
+                <span className="font-semibold text-gray-200">Board:</span> Barishal Education Board
               </p>
               <p>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">
-                  Group:
-                </span>{" "}
-                Science
+                <span className="font-semibold text-gray-200">Group:</span> Science
               </p>
               <p>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">
-                  Passing Year:
-                </span>{" "}
-                2019
+                <span className="font-semibold text-gray-200">Passing Year:</span> 2019
               </p>
               <p>
-                <span className="font-semibold text-gray-800 dark:text-gray-200">
-                  Result:
-                </span>{" "}
-                GPA 5.00 / 5.00
+                <span className="font-semibold text-gray-200">Result:</span> GPA 5.00 / 5.00
               </p>
             </div>
 
@@ -150,10 +124,12 @@ const HSC = () => {
 
       {/* Gallery Section */}
       <GalleryDivHSC />
-                  <div className="flex justify-center mt-8">
+
+      {/* Go Home Link */}
+      <div className="flex justify-center mt-8">
         <Link
           to="/"
-          className="flex w-30 text-black  items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
+          className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
         >
           Go Home <FaArrowRight />
         </Link>

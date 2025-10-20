@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import profile from "../assets/me.jpg";
-import {
-  MdOutlineFactCheck,
-} from "react-icons/md";
-import {
-  FaCity,
-  FaUserGraduate,
-} from "react-icons/fa";
+import { MdOutlineFactCheck } from "react-icons/md";
+import { FaCity, FaUserGraduate } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 import { CiGlobe } from "react-icons/ci";
 import { GrUserSettings } from "react-icons/gr";
@@ -15,9 +10,10 @@ import { GiInspiration } from "react-icons/gi";
 import FindMeSection from "../components/findMe";
 
 const About = () => {
-  const [isClicked,setIsClicked]= useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
-    <section className="bg-[#1C232B] text-white py-20 px-6 md:px-20">
+    <section className="bg-[#282F37] text-white py-20 px-6 md:px-20">
       {/* Main About Section */}
       <motion.div
         className="flex flex-col md:flex-row items-center justify-between gap-10 max-w-6xl mx-auto"
@@ -30,7 +26,7 @@ const About = () => {
           <img
             src={profile}
             alt="Shuvo Mallik"
-            className="rounded-2xl shadow-lg object-cover w-72 h-72 md:w-96 md:h-96 border-4 border-[#12F7D6]"
+            className="rounded-2xl shadow-lg object-cover w-72 h-72 md:w-96 md:h-96 border-4 border-[#12F7D6] transform transition-transform duration-500 hover:scale-105"
           />
         </div>
 
@@ -154,16 +150,13 @@ const About = () => {
           View My Work
         </a>
         <a
-        
           onClick={() => setIsClicked(!isClicked)}
           className="px-6 py-3 border border-[#12F7D6] text-[#12F7D6] hover:cursor-pointer rounded-full hover:bg-[#12F7D6] hover:text-black transition-all duration-300"
         >
           Find Me
         </a>
       </div>
-      {
-        isClicked? <FindMeSection/> : ''
-      }
+      {isClicked && <FindMeSection />}
     </section>
   );
 };

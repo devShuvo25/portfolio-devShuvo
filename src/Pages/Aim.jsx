@@ -7,7 +7,8 @@ export default function Aim() {
   return (
     <section
       id="aim-dream"
-      className="py-24 bg-gradient-to-tr from-purple-50 to-pink-100 dark:from-gray-900 dark:to-gray-800"
+      className="py-24"
+      style={{ backgroundColor: "#282F37", color: "white" }}
     >
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
 
@@ -34,26 +35,26 @@ export default function Aim() {
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
              My Aim & <span className="text-[#12F7D6]">Dream</span>
           </h1>
 
-          <p className="  text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             I am Shuvo Mallik, an aspiring MERN stack developer and urban planner. My dream is to combine technology and urban planning to create sustainable, smart cities that improve people's lives and the environment.
           </p>
 
-          <p className="  text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             Achieving this requires dedication, patience, and consistent hard work. I focus on learning new skills, building meaningful projects, and staying persistent through challenges, knowing that progress takes time.
           </p>
 
-          <p className=" text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             My aim is to grow as a professional bridging technology and sustainable urban development. I continuously seek knowledge, tools, and experiences that equip me to make a meaningful impact.
           </p>
-
-          {/* Go Home Button */}
         </motion.div>
       </div>
-                  <div className="flex justify-center mt-5">
+
+      {/* Go Home Button */}
+      <div className="flex justify-center mt-5">
         <Link
           to="/"
           className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"

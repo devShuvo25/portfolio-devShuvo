@@ -30,7 +30,8 @@ export default function AchievementsSection() {
   return (
     <section
       id="achievements"
-      className="py-24 bg-gradient-to-br from-yellow-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
+      className="py-24"
+      style={{ backgroundColor: "#282F37", color: "white" }} // Dark mode background
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
         
@@ -40,7 +41,7 @@ export default function AchievementsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-12"
+          className="text-4xl md:text-5xl font-bold text-white mb-12"
         >
           🏆 My <span className="text-[#12F7D6]">Scholarship</span>
         </motion.h2>
@@ -54,23 +55,21 @@ export default function AchievementsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 p-8"
+              className="bg-[#1F262E] rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 p-8"
             >
               <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200">
-                {item.title}
-              </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic mt-1">
+              <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
+              <p className="text-gray-300 text-sm italic mt-1">
                 {item.exam} — {item.year}
               </p>
-              <p className="text-gray-600 dark:text-gray-300 mt-4 leading-relaxed">
-                {item.desc}
-              </p>
+              <p className="text-gray-300 mt-4 leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
-                  <div className="flex justify-center mt-5">
+
+      {/* Go Home Button */}
+      <div className="flex justify-center mt-5">
         <Link
           to="/"
           className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"

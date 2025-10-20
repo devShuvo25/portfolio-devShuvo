@@ -8,7 +8,7 @@ import academic5 from "../assets/line new.jpg";
 import academic6 from "../assets/poster.jpg";
 import { Link } from "react-router";
 
-// Sample data, replace with your projects
+// Sample data
 const developmentProjects = [
   {
     title: "Pulse App Store",
@@ -43,48 +43,28 @@ const developmentProjects = [
 ];
 
 const academicProjects = [
-  {
-    title: "Portfolio",
-    description: "Overall Projects-all in one.",
-    image: academic3
-  },
-  {
-    title: "Pixelation",
-    description: "Portrait self pixelation for URP 1152 lab.",
-    image: academic1
-  },
-  {
-    title: "Color Wheel",
-    description: "Understanding the colot concept",
-    image:academic2
-  },
-  {
-    title: "2D Composition",
-    description: "Understanding 2D Model",
-    image:academic4
-  },
-  {
-    title: " Composition Line",
-    description: "Understanding Line Composition of nature",
-    image:academic5
-  },
-  {
-    title: " Poster Design",
-    description: "Understanding Line Composition of nature",
-    image:academic6
-  }
+  { title: "Portfolio", description: "Overall Projects-all in one.", image: academic3 },
+  { title: "Pixelation", description: "Portrait self pixelation for URP 1152 lab.", image: academic1 },
+  { title: "Color Wheel", description: "Understanding the color concept", image: academic2 },
+  { title: "2D Composition", description: "Understanding 2D Model", image: academic4 },
+  { title: "Composition Line", description: "Understanding Line Composition of nature", image: academic5 },
+  { title: "Poster Design", description: "Understanding Poster Design concepts", image: academic6 },
 ];
 
 export default function ProjectsShowcase() {
   return (
-    <section id="projects" className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section
+      id="projects"
+      className="py-24"
+      style={{ backgroundColor: "#282F37", color: "white" }} // Dark mode background
+    >
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* ===== Development Projects ===== */}
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Web Projects
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
           Web and software projects with live demos and GitHub repositories.
         </p>
 
@@ -96,19 +76,17 @@ export default function ProjectsShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow hover:scale-[1.03] flex flex-col justify-between"
+              className="bg-[#1F262E] rounded-3xl p-6 shadow-md hover:shadow-xl transition-shadow hover:scale-[1.03] flex flex-col justify-between"
             >
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+              <p className="text-gray-300 mb-4">{project.description}</p>
               <div className="flex gap-4 justify-center md:justify-start mt-auto">
                 {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-800 dark:bg-gray-200 text-white dark:text-gray-800 rounded-full text-sm hover:bg-gray-900 dark:hover:bg-gray-300 transition"
+                    className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-full text-sm hover:bg-gray-900 transition"
                   >
                     <FaGithub /> GitHub
                   </a>
@@ -136,10 +114,10 @@ export default function ProjectsShowcase() {
         </a>
 
         {/* ===== Academic Projects ===== */}
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mt-24 mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mt-24 mb-6">
           Academic Projects
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-300 mb-12 max-w-2xl mx-auto">
           University and academic projects with images and descriptions.
         </p>
 
@@ -151,18 +129,12 @@ export default function ProjectsShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:scale-[1.03]"
+              className="bg-[#1F262E] rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-shadow hover:scale-[1.03]"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
+              <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
               <div className="p-6 text-left">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                <p className="text-gray-300">{project.description}</p>
               </div>
             </motion.div>
           ))}
@@ -175,7 +147,9 @@ export default function ProjectsShowcase() {
           See More Academic Projects
         </a>
       </div>
-                  <div className="flex justify-center mt-5">
+
+      {/* Go Home Button */}
+      <div className="flex justify-center mt-5">
         <Link
           to="/"
           className="flex w-30 text-black items-center gap-2 bg-custom-sec px-3 py-3 rounded-md font-medium hover:bg-blue-700 transition-all duration-300"
