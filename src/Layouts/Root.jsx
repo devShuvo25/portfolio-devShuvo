@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Root = () => {
   return (
-    <div className="flex flex-col min-h-screen text-[rgb(255,255,253)]">
+    <div className="flex max-e-[1440px]  flex-col min-h-screen text-[rgb(255,255,253)]">
       <NavBar />
         <main className="flex-1">
           <Outlet />

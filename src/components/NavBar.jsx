@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { FaCode, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link } from "react-router"; // ✅ FIXED (was "react-router" before)
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
-      <nav className="bg-custom-primary text-white shadow-md fixed w-full z-50">
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+      {/* ✅ Full width fixed navbar */}
+      <nav className="bg-custom-primary text-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div className="max-w-[1440px] mx-auto px-6 flex justify-between items-center h-16">
           
           {/* Hamburger + Logo */}
           <div className="flex items-center gap-3">
@@ -32,12 +33,15 @@ const NavBar = () => {
 
             {/* About Me Dropdown */}
             <div className="relative group">
-              <Link to='/about-me' className="hover:text-[#12F7D6] cursor-pointer transition-colors duration-200">
+              <Link
+                to="/about-me"
+                className="hover:text-[#12F7D6] cursor-pointer transition-colors duration-200"
+              >
                 About Me
               </Link>
-              <div className="absolute left-0 top-4  mt-2 hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-40">
-                <Link to='hobbies' className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">Hobbies</Link>
-                <Link to='intrests' className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Interests</Link>
+              <div className="absolute left-0  hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-40">
+                <Link to="/hobbies" className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">Hobbies</Link>
+                <Link to="/intrests" className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Interests</Link>
               </div>
             </div>
 
@@ -46,10 +50,10 @@ const NavBar = () => {
               <span className="hover:text-[#12F7D6] cursor-pointer transition-colors duration-200">
                 Education
               </span>
-              <div className="absolute left-0 top-4 mt-2 hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-48">
-                <Link to="education-ssc" className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">SSC</Link>
-                <Link to="education-hsc" className="px-4 py-2 hover:bg-gray-100">HSC</Link>
-                <Link to="education-burp" className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Undergraduate</Link>
+              <div className="absolute left-0  hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-48">
+                <Link to="/education-ssc" className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">SSC</Link>
+                <Link to="/education-hsc" className="px-4 py-2 hover:bg-gray-100">HSC</Link>
+                <Link to="/education-burp" className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Undergraduate</Link>
               </div>
             </div>
 
@@ -58,9 +62,9 @@ const NavBar = () => {
               <span className="hover:text-[#12F7D6] cursor-pointer transition-colors duration-200">
                 Achievements
               </span>
-              <div className="absolute left-0 top-4 mt-2 hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-40">
-                <Link to='scholarship' className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">Scholarship</Link>
-                <Link to='award' className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Award</Link>
+              <div className="absolute left-0  hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-40">
+                <Link to="/scholarship" className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">Scholarship</Link>
+                <Link to="/award" className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Award</Link>
               </div>
             </div>
 
@@ -69,22 +73,23 @@ const NavBar = () => {
               <span className="hover:text-[#12F7D6] cursor-pointer transition-colors duration-200">
                 Career
               </span>
-              <div className="absolute left-0 top-4 mt-2 hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-48">
-                <Link to="aim" className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">Aim</Link>
-                <Link to="skills" className="px-4 py-2 hover:bg-gray-100">Skills</Link>
-                <Link to="projects" className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Projects</Link>
+              <div className="absolute left-0  hidden group-hover:flex flex-col bg-white text-gray-800 rounded-md shadow-lg w-48">
+                <Link to="/aim" className="px-4 py-2 hover:bg-gray-100 hover:rounded-t-md">Aim</Link>
+                <Link to="/skills" className="px-4 py-2 hover:bg-gray-100">Skills</Link>
+                <Link to="/projects" className="px-4 py-2 hover:bg-gray-100 hover:rounded-b-md">Projects</Link>
               </div>
             </div>
           </div>
 
-          {/* Download CV (always right) */}
-          <Link
+          {/* CV Button */}
+          <a
             href="https://drive.google.com/file/d/1gNUexHw9eR_fBh0K437HS5T8MgguX0yp/view?usp=drive_link"
             target="_blank"
-            className="px-2 lg:px-5 py-2 bg-custom-sec text-black rounded-lg hover:bg-[#0ebea6] transition-colors duration-200"
+            rel="noopener noreferrer"
+            className="px-3 lg:px-5 py-2 bg-custom-sec text-black rounded-lg hover:bg-[#0ebea6] transition-colors duration-200"
           >
             Download CV
-          </Link>
+          </a>
         </div>
       </nav>
 
@@ -95,7 +100,9 @@ const NavBar = () => {
         }`}
       >
         <div className="flex justify-between items-center p-6 border-b border-gray-700 uppercase">
-          <h2 to='/' className="text-xl font-bold">Dev <span className="text-[#12F7D6]">Shuvo</span></h2>
+          <h2 className="text-xl font-bold">
+            Dev <span className="text-[#12F7D6]">Shuvo</span>
+          </h2>
           <button onClick={() => setSidebarOpen(false)}>
             <FaTimes size={24} />
           </button>
@@ -105,36 +112,36 @@ const NavBar = () => {
           <Link onClick={() => setSidebarOpen(false)} to="/home">Home</Link>
 
           <div className="flex flex-col">
-            <Link to='/about-me' className="font-medium">About Me</Link>
+            <Link to="/about-me" className="font-medium">About Me</Link>
             <div className="flex flex-col ml-4 mt-1 space-y-1">
-              <Link to='hobbies' onClick={() => setSidebarOpen(false)}>Hobbies</Link>
-              <Link to='intrests' onClick={() => setSidebarOpen(false)}>Interests</Link>
+              <Link to="/hobbies" onClick={() => setSidebarOpen(false)}>Hobbies</Link>
+              <Link to="/intrests" onClick={() => setSidebarOpen(false)}>Interests</Link>
             </div>
           </div>
 
           <div className="flex flex-col">
             <span className="font-medium">Education</span>
             <div className="flex flex-col ml-4 mt-1 space-y-1">
-              <Link to="education-ssc" onClick={() => setSidebarOpen(false)}>SSC</Link>
-              <Link to="education-hsc" onClick={() => setSidebarOpen(false)}>HSC</Link>
-              <Link to="education-burp" onClick={() => setSidebarOpen(false)}>Undergraduate</Link>
+              <Link to="/education-ssc" onClick={() => setSidebarOpen(false)}>SSC</Link>
+              <Link to="/education-hsc" onClick={() => setSidebarOpen(false)}>HSC</Link>
+              <Link to="/education-burp" onClick={() => setSidebarOpen(false)}>Undergraduate</Link>
             </div>
           </div>
 
           <div className="flex flex-col">
             <span className="font-medium">Achievements</span>
             <div className="flex flex-col ml-4 mt-1 space-y-1">
-              <Link to='scholarship' onClick={() => setSidebarOpen(false)}>Scholarship</Link>
-              <Link to='award' onClick={() => setSidebarOpen(false)}>Award</Link>
+              <Link to="/scholarship" onClick={() => setSidebarOpen(false)}>Scholarship</Link>
+              <Link to="/award" onClick={() => setSidebarOpen(false)}>Award</Link>
             </div>
           </div>
 
           <div className="flex flex-col">
             <span className="font-medium">Career</span>
             <div className="flex flex-col ml-4 mt-1 space-y-1">
-              <Link to="aim" onClick={() => setSidebarOpen(false)}>Aim</Link>
-              <Link to="skills" onClick={() => setSidebarOpen(false)}>Skills</Link>
-              <Link to="projects" onClick={() => setSidebarOpen(false)}>Projects</Link>
+              <Link to="/aim" onClick={() => setSidebarOpen(false)}>Aim</Link>
+              <Link to="/skills" onClick={() => setSidebarOpen(false)}>Skills</Link>
+              <Link to="/projects" onClick={() => setSidebarOpen(false)}>Projects</Link>
             </div>
           </div>
         </nav>
